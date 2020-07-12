@@ -7,7 +7,7 @@ data class Card(
 
 enum class CardPattern {
     SPADE,
-    HEARD,
+    HEART,
     DIAMOND,
     CLUB
 }
