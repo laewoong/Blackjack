@@ -16,7 +16,7 @@ class GamerTest {
     @Test
     fun `현재 가지고 있는 카드를 모두 리턴한다`() {
 
-        val cardList = listOf(
+        val cardList = mutableListOf(
             Card(CardPattern.DIAMOND, "A"),
             Card(CardPattern.CLUB, "2"),
             Card(CardPattern.HEART, "3")

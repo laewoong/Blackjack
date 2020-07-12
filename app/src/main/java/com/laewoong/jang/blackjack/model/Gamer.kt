@@ -1,14 +1,14 @@
 package com.laewoong.jang.blackjack.model
 
 class Gamer(
-    val cards: List<Card> = emptyList()
+    val cards: MutableList<Card> = mutableListOf<Card>()
 ) {
 
     fun receiveCard(card: Card) {
-
+        cards.add(card)
     }
 
     fun openCards(): List<Card> {
-        return emptyList()
+        return cards
     }
 }
