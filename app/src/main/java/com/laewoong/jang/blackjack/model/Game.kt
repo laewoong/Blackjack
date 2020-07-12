@@ -4,6 +4,8 @@ class Game(
     val dealer: Dealer = Dealer(),
     val gamer: Gamer = Gamer()
 ) {
+    val cardDeck = CardDeck()
+
     fun play() {
 
 //        val dealer = Dealer()
@@ -14,5 +16,9 @@ class Game(
 
     fun initPhase() {
 
+        (1 .. 2).forEach {
+            dealer.receiveCard(cardDeck.draw())
+            gamer.receiveCard(cardDeck.draw())
+        }
     }
 }
