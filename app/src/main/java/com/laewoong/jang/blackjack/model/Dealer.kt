@@ -4,7 +4,7 @@ class Dealer(
     val cards: MutableList<Card> = mutableListOf()
 ) {
     fun receiveCard(card: Card) {
-        if(cards.map { it.point }.sum() <= 16) {
+        if(isReceiveCard()) {
             cards.add(card)
         }
     }
@@ -14,6 +14,6 @@ class Dealer(
     }
 
     fun isReceiveCard(): Boolean {
-        return false
+        return cards.map { it.point }.sum() <= 16
     }
 }
