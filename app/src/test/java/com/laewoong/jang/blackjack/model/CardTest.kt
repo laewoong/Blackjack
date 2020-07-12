@@ -19,19 +19,19 @@ class CardTest {
     @Test
     fun `J는 11점을 리턴한다`() {
         val card = Card(CardPattern.CLUB, "J")
-        assertEquals(1, card.point)
+        assertEquals(11, card.point)
     }
 
     @Test
     fun `Q는 12점을 리턴한다`() {
         val card = Card(CardPattern.CLUB, "Q")
-        assertEquals(1, card.point)
+        assertEquals(12, card.point)
     }
 
     @Test
     fun `K는 13점을 리턴한다`() {
         val card = Card(CardPattern.CLUB, "K")
-        assertEquals(1, card.point)
+        assertEquals(13, card.point)
     }
 
     @Test

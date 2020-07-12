@@ -5,7 +5,24 @@ data class Card(
     val denomination: String
 ) {
     val point: Int
-    get() = 0
+    get() = when(denomination) {
+        "A" -> 1
+        "J" -> 11
+        "Q" -> 12
+        "K" -> 13
+        else -> {
+            try {
+                val num = denomination.toInt()
+                if(num in 2..10) {
+                    num
+                } else {
+                    throw IllegalStateException("$denomination is invalid number. Number point should be in 2..10!")
+                }
+            } catch (e: NumberFormatException) {
+                throw IllegalStateException("Can't cast to Int : $denomination")
+            }
+        }
+    }
 }
 
 enum class CardPattern {
