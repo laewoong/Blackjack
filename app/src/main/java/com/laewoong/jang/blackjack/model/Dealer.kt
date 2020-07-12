@@ -1,7 +1,7 @@
 package com.laewoong.jang.blackjack.model
 
 class Dealer(
-    val card: List<Card>
+    val card: MutableList<Card> = mutableListOf()
 ) {
     fun receiveCard(card: Card) {
 
